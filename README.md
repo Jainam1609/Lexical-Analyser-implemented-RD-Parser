@@ -16,28 +16,33 @@ Expressions with unbalanced parentheses and Expression syntax error etc.) with a
 Recursive Descent Parser implemented for the following grammar:
 
 Program --> main() { declarations statement_list } <br />
-identifier_list --> id idlistPrime
-idlistPrime --> ε | ,identifier_list | [number] idArray
-idArray --> ε | ,identifier_list
-statement_list --> statement statement_list | ε
-statement --> assign_stat;
-assign_stat --> id = expn
-expn --> simple_expn eprime
-eprime --> relop simple_expn | ε
-simple_expn --> term seprime
-seprime --> addop term seprime | ε
-term --> factor tprime
-tprime --> mulop factor seprime | ε
-factor --> id | num
-relop --> == | != | <= | >= | > | <
-addop --> + | -
-mulop --> * | / | %   
-statement --> assign_stat; | decision_stat | looping_stat
-decision_stat --> if (expn) { statement_list } dprime
-dprime --> else { statement_list } | ε
-looping_stat --> while (expn) { statement_list } | for (assign_stat; expn; assign_stat) { statement_list }
+identifier_list --> id idlistPrime <br />
+idlistPrime --> ε | ,identifier_list | [number] idArray <br />
+idArray --> ε | ,identifier_list <br />
+statement_list --> statement statement_list | ε <br />
+statement --> assign_stat; <br />
+assign_stat --> id = expn <br />
+expn --> simple_expn eprime <br />
+eprime --> relop simple_expn | ε <br />
+simple_expn --> term seprime <br />
+seprime --> addop term seprime | ε <br />
+term --> factor tprime <br />
+tprime --> mulop factor seprime | ε <br />
+factor --> id | num <br />
+relop --> == | != | <= | >= | > | < <br />
+addop --> + | - <br />
+mulop --> * | / | % <br />
+statement --> assign_stat; | decision_stat | looping_stat <br />
+decision_stat --> if (expn) { statement_list } dprime <br />
+dprime --> else { statement_list } | ε <br />
+looping_stat --> while (expn) { statement_list } | for (assign_stat; expn; assign_stat) { statement_list } 
 
 # Insights
+Before parsing the input file, remove ambiguity and left recursion, if present and also perform left factoring on subset of grammer given.
+Initially it takes a file as an input and replaces blank spaces and tabs with single space and writes the output to a temp file and 
+then this temp file is taken as input to remove the preprocessor directives and is stored in another temp2 file.
+The temp2 file is then taken as the input file and is tokenized and stored in a dest.txt file-between angular brackets containing the row number 
+and column number for each character.
 
 
 
