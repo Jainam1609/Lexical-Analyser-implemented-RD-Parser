@@ -1,3 +1,9 @@
+# Lexical Analysis
+The main task of Lexical Analyser is to generate tokens. 
+Lexical Analyzer uses getNextToken( ) to extract each lexeme from the given source file and generate 
+corresponding token one at a time. For each identified token an entry is made in the symbol table. 
+If entry is already found in the table, then it returns the pointer to the symbol table entry for that token.
+
 # Recursive Descent Parsers
 Recursive descent is a top-down parsing technique that constructs the parse tree from the top and the input is read from left to right. 
 It uses procedures for every terminal and non-terminal entity. This parsing technique recursively parses the input to make a parse tree, 
