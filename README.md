@@ -1,9 +1,10 @@
-RECURSIVE DESCENT PARSERS:
+# RECURSIVE DESCENT PARSERS:
 Recursive descent is a top-down parsing technique that constructs the parse tree from the top and the input is read from left to right. 
 It uses procedures for every terminal and non-terminal entity. This parsing technique recursively parses the input to make a parse tree, 
 which may or may not require back-tracking. But the grammar associated with it (if not left factored) cannot avoid back-tracking. 
 A form of recursive-descent parsing that does not require any back-tracking is known as predictive parsing.
 
+# Problem Statement:
 A simple ‘C’ language grammar is given below. RD parser is created for the grammar and integrated it with lexical analyzer. 
 Before parsing the input file, removal of ambiguity and left recursion is mandatory, if present and also left factoring is performed on grammar. 
 Include the functions first(X) and follow(X).Lexical analyzer code should be included as header file in parser code. 
