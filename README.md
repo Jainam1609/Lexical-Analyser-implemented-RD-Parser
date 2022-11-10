@@ -15,7 +15,7 @@ Expressions with unbalanced parentheses and Expression syntax error etc.) with a
 # Lexical-Analyser-implemented-RD-Parser
 Recursive Descent Parser implemented for the following grammar:
 
-Program --> main() { declarations statement_list }
+Program --> main() { declarations statement_list }__
 identifier_list --> id idlistPrime
 idlistPrime --> ε | ,identifier_list | [number] idArray
 idArray --> ε | ,identifier_list
