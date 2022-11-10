@@ -38,11 +38,10 @@ dprime --> else { statement_list } | ε <br />
 looping_stat --> while (expn) { statement_list } | for (assign_stat; expn; assign_stat) { statement_list } 
 
 # Insights
-Before parsing the input file, remove ambiguity and left recursion, if present and also perform left factoring on subset of grammer given.
 Initially it takes a file as an input and replaces blank spaces and tabs with single space and writes the output to a temp file and 
-then this temp file is taken as input to remove the preprocessor directives and is stored in another temp2 file.
-The temp2 file is then taken as the input file and is tokenized and stored in a dest.txt file-between angular brackets containing the row number 
-and column number for each character.
+then this temp file is serves as input to remove the preprocessor directives and is documented in another file temp2.
+The temp2 file is then taken as the input file and is tokenized and stored in a dest.txt file ,between angular brackets containing the row 
+number and column number for each token.
 
 
 
